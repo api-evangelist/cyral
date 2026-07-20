@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://cyral.com/docs/api-ref/api-intro/ (archived) +
+  https://registry.terraform.io/providers/cyralinc/cyral/latest/docs
+note: >-
+  Derived from documentation rather than a live OpenAPI spec (Cyral publishes no
+  public OpenAPI/Swagger; cyral.com now redirects to Varonis). The Cyral Control
+  Plane API uses OAuth2 client-credentials. A client obtains a token by POSTing a
+  clientId/clientSecret pair to the control plane token endpoint, then presents it
+  as a Bearer token. The Terraform provider is configured with control_plane,
+  client_id, and client_secret.
+summary:
+  types: [oauth2, http]
+  oauth2_flows: [clientCredentials]
+  http_schemes: [bearer]
+schemes:
+  - name: oauth2ClientCredentials
+    type: oauth2
+    flow: clientCredentials
+    token_url: 'https://<control-plane-host>:8000/v1/users/oidc/token'
+    grant: client_credentials
+    credentials: [client_id, client_secret]
+    description: >-
+      Machine-to-machine OAuth2 client-credentials grant against the customer's
+      Cyral Control Plane. Returns an access_token used as a Bearer token for API
+      calls. Control plane host is customer-specific (self-hosted / dedicated).
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    bearer_format: JWT
+    description: Access token from the client-credentials grant, sent as Authorization Bearer.
+identity_providers:
+  - Okta (via terraform-okta-idp SCIM integration module)
+  - Generic SAML / OIDC IdP integrations supported by the control plane
