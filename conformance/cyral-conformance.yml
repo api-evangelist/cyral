@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://github.com/cyralinc/cyral-go-scim +
+  https://github.com/cyralinc/terraform-okta-idp +
+  Cyral API auth documentation
+note: >-
+  Cross-cutting standards conformance derived from Cyral's published first-party
+  tooling and documented auth model. No public OpenAPI spec is available (site
+  redirects to Varonis), so contract-level standards are asserted from the SCIM
+  library, IdP integration modules, and the documented OAuth2 flow rather than
+  from a machine-readable spec. No published SOC 2 / ISO 27001 certification page
+  was verifiable at enrichment time, so no Compliance pointer is emitted.
+standards:
+  - id: scim2
+    conforms: true
+    evidence: >-
+      cyral-go-scim provides SCIM v2 server building blocks; terraform-okta-idp
+      wires SCIM-based identity provisioning.
+  - id: oauth2
+    conforms: true
+    evidence: Control Plane API uses OAuth2 client-credentials (token endpoint /v1/users/oidc/token).
+  - id: oidc
+    conforms: true
+    evidence: Token endpoint path is /v1/users/oidc/token; OIDC IdP integrations supported.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No public spec available to confirm application/problem+json usage.
+  - id: fhir-r4
+    conforms: false
+  - id: fapi
+    conforms: false

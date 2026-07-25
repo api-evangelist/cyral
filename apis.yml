@@ -1,8 +1,30 @@
 aid: cyral
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cyral.png
 name: Cyral
-description: 'Cyral is a company surfaced as a portfolio company of redpoint-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Cyral is a data security and governance platform (founded 2018, Milpitas CA;
+  acquired by Varonis in March 2025) that provides an agentless, stateless
+  data-layer sidecar for monitoring and governing access to data repositories
+  such as Snowflake, PostgreSQL, MySQL, MongoDB, Amazon S3, Kafka, and Oracle.
+  Cyral was built API-first: its Control Plane exposes a REST API secured with
+  OAuth2 client-credentials, fully automatable through the official Cyral
+  Terraform provider (cyralinc/cyral) and supporting Terraform modules for AWS,
+  Azure, and Okta. Following the Varonis acquisition, cyral.com now redirects to
+  Varonis' Database Activity Monitoring product, but the first-party developer
+  tooling remains published on the cyralinc GitHub organization and the Terraform
+  Registry.
 url: https://raw.githubusercontent.com/api-evangelist/cyral/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +32,22 @@ x-backed-by:
 - redpoint-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: varonis
+x-acquired-announced: '2025-03-17'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Cybersecurity
+- Data Security
+- Database Activity Monitoring
+- Data Governance
+- Access Control
+- Terraform
+- SCIM
+- OAuth
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +57,28 @@ maintainers:
 common:
 - type: Website
   url: https://www.cyral.com/
+- type: GitHubOrganization
+  url: https://github.com/cyralinc
+- type: Documentation
+  url: https://registry.terraform.io/providers/cyralinc/cyral/latest/docs
+- type: Packages
+  url: packages/cyral-packages.yml
+- type: SDKs
+  url: packages/cyral-packages.yml
+- type: Authentication
+  url: authentication/cyral-authentication.yml
+- type: ChangeLog
+  url: changelog/cyral-changelog.yml
+- type: Lifecycle
+  url: lifecycle/cyral-lifecycle.yml
+- type: Conformance
+  url: conformance/cyral-conformance.yml
+- type: DomainSecurity
+  url: security/cyral-domain-security.yml
+- type: LLMsTxt
+  url: llms/cyral-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

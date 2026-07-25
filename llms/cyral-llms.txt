@@ -1,0 +1,33 @@
+# Cyral
+
+> Cyral is a data security and governance platform (founded 2018, Milpitas CA; acquired by Varonis in March 2025) providing an agentless, stateless data-layer sidecar that monitors and governs access to data repositories such as Snowflake, PostgreSQL, MySQL, MongoDB, Amazon S3, Kafka, and Oracle. Built API-first, its Control Plane exposes a REST API (OAuth2 client-credentials) automatable through the official Cyral Terraform provider. After the Varonis acquisition, cyral.com redirects to Varonis' Database Activity Monitoring product; first-party tooling remains on the cyralinc GitHub organization and the Terraform Registry.
+
+## Note
+- Company status: acquired by Varonis Systems (announced 2025-03-17). cyral.com now redirects to Varonis DAM. This profile captures the surviving public first-party developer surface.
+
+## API
+- Cyral Control Plane API: OAuth2 client-credentials; token endpoint `https://<control-plane-host>:8000/v1/users/oidc/token`; Bearer JWT for subsequent calls. Host is customer/self-hosted (no single public base host).
+
+## Tooling & Packages
+- Terraform provider (official): https://registry.terraform.io/providers/cyralinc/cyral/latest
+- Terraform provider source: https://github.com/cyralinc/terraform-provider-cyral
+- Terraform module — AWS EC2 sidecar: https://github.com/cyralinc/terraform-aws-sidecar-ec2
+- Terraform module — Azure VM sidecar: https://github.com/cyralinc/terraform-azure-sidecar-vm
+- Terraform module — AWS Repo Crawler: https://github.com/cyralinc/terraform-aws-repo-crawler
+- Terraform module — Okta IdP (SCIM): https://github.com/cyralinc/terraform-okta-idp
+- SCIM v2 building blocks (Go): https://github.com/cyralinc/cyral-go-scim
+- Cyral CLI (PyPI, first-party unverified): https://pypi.org/project/cyral/
+
+## Docs
+- GitHub organization: https://github.com/cyralinc
+- Terraform Registry docs: https://registry.terraform.io/providers/cyralinc/cyral/latest/docs
+- Provider changelog: https://github.com/cyralinc/terraform-provider-cyral/blob/main/CHANGELOG.md
+- Varonis product (successor): https://www.varonis.com/platform/database-activity-monitoring
+
+## Repo artifacts
+- Packages: packages/cyral-packages.yml
+- Authentication: authentication/cyral-authentication.yml
+- Changelog: changelog/cyral-changelog.yml
+- Lifecycle: lifecycle/cyral-lifecycle.yml
+- Conformance: conformance/cyral-conformance.yml
+- Domain security: security/cyral-domain-security.yml

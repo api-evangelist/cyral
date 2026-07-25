@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cyralinc/terraform-provider-cyral/blob/main/CHANGELOG.md
+note: >-
+  There is no live product changelog on cyral.com (the domain redirects to Varonis
+  after the March 2025 acquisition). The authoritative dated change history that
+  survives is the official Terraform provider CHANGELOG, tracking the client
+  surface against Cyral Control Plane versions.
+scheme: semver
+current_version: 4.16.3
+subject: cyralinc/cyral Terraform Provider (Cyral Control Plane API client)
+entries:
+  - version: 4.16.3
+    date: '2025-03-10'
+    breaking: false
+    highlights:
+      - 'Bug fix: fix panic in HTTP error handling (ENG-14851).'
+      - Bumped all dependencies.
+  - version: 4.16.2
+    date: '2025-03-05'
+    breaking: false
+    highlights:
+      - Added LICENSE-3RD-PARTY.txt.
+  - version: 4.16.1
+    date: '2025-01-07'
+    breaking: false
+    highlights:
+      - Bumped all dependencies.
+      - Fixed repo-level policy examples in documentation.
+  - version: 4.16.0
+    date: '2025-01-02'
+    breaking: false
+    additions:
+      - Implemented cyral_policy_wizards data source (requires control plane v4.18+).
+    highlights:
+      - Safe with all v4 control planes unless the new incompatible features are used.
+  - version: 4.15.0
+    date: '2024-12-10'
+    breaking: false
+    highlights:
+      - New features gated to a minimum control plane version; safe across v4 otherwise.

@@ -1,0 +1,60 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/cyralinc + https://registry.terraform.io/providers/cyralinc/cyral
+note: >-
+  Cyral was acquired by Varonis (announced 2025-03-17) and cyral.com now redirects
+  to Varonis. First-party client tooling remains published on the cyralinc GitHub
+  organization and the Terraform Registry. The Cyral Control Plane REST API is
+  primarily automated through the official Terraform provider and its supporting
+  modules rather than language SDKs.
+packages:
+  - language: hcl
+    registry: terraform
+    name: cyralinc/cyral
+    url: https://registry.terraform.io/providers/cyralinc/cyral/latest
+    source: https://github.com/cyralinc/terraform-provider-cyral
+    version: 4.16.3
+    install: 'terraform { required_providers { cyral = { source = "cyralinc/cyral" } } }'
+    official: true
+    description: Official Cyral Terraform Provider for the Cyral Control Plane API.
+  - language: hcl
+    registry: terraform
+    name: terraform-aws-sidecar-ec2
+    url: https://github.com/cyralinc/terraform-aws-sidecar-ec2
+    install: 'module "cyral_sidecar" { source = "cyralinc/sidecar-ec2/aws" }'
+    official: true
+    description: Cyral sidecar deployment module for AWS EC2.
+  - language: hcl
+    registry: terraform
+    name: terraform-azure-sidecar-vm
+    url: https://github.com/cyralinc/terraform-azure-sidecar-vm
+    official: true
+    description: Cyral sidecar deployment module for Azure Virtual Machines.
+  - language: hcl
+    registry: terraform
+    name: terraform-aws-repo-crawler
+    url: https://github.com/cyralinc/terraform-aws-repo-crawler
+    official: true
+    description: Cyral Repo Crawler module for AWS (data repository discovery).
+  - language: hcl
+    registry: terraform
+    name: terraform-okta-idp
+    url: https://github.com/cyralinc/terraform-okta-idp
+    official: true
+    description: Cyral IdP integration module for Okta.
+  - language: go
+    registry: go-modules
+    name: github.com/cyralinc/cyral-go-scim
+    url: https://github.com/cyralinc/cyral-go-scim
+    install: go get github.com/cyralinc/cyral-go-scim
+    official: true
+    description: Building blocks for servers implementing SCIM v2 (System for Cross-domain Identity Management).
+  - language: python
+    registry: pypi
+    name: cyral
+    url: https://pypi.org/project/cyral/
+    install: pip install cyral
+    official: false
+    description: >-
+      "The Cyral CLI tool" published to PyPI (author Deepak Gupta). First-party
+      attribution unverified after the Varonis acquisition; listed for completeness.

@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://www.globenewswire.com/news-release/2025/03/17/3044111/0/en/Varonis-Acquires-Cyral-to-Reinvent-Database-Activity-Monitoring.html
+  + https://github.com/cyralinc/terraform-provider-cyral
+company_status:
+  state: acquired
+  acquirer: Varonis Systems
+  announced: '2025-03-17'
+  note: >-
+    Cyral (founded 2018, Milpitas CA) was acquired by Varonis to power its
+    next-generation Database Activity Monitoring. cyral.com now 302-redirects to
+    the Varonis DAM product page; the standalone Cyral developer site is retired.
+versioning:
+  api:
+    scheme: control-plane-version
+    current: v4
+    note: >-
+      The Control Plane API version tracks the deployed control plane (v2.x through
+      v4.x historically; API reference was published per control-plane version,
+      e.g. v2.33, v4.0, v4.1).
+  provider:
+    scheme: semver
+    current: 4.16.3
+    note: Official Terraform provider; features gated to minimum control-plane versions.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: >-
+    No published deprecation policy page. Several legacy Terraform modules are
+    archived/marked DEPRECATED in the cyralinc GitHub org (e.g.
+    terraform-aws-sidecar-custom-certificate, terraform-aws-sidecar-custom-certificate-letsencrypt).
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
