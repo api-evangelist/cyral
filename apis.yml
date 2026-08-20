@@ -47,6 +47,16 @@ tags:
 - Access Control
 - Terraform
 - SCIM
+- Authentication
+tags_raw:
+- Company
+- Cybersecurity
+- Data Security
+- Database Activity Monitoring
+- Data Governance
+- Access Control
+- Terraform
+- SCIM
 - OAuth
 apis: []
 maintainers:
