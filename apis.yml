@@ -20,6 +20,7 @@ accessModel:
   confidence: medium
   source:
   - authentication
+  - {url: 'https://www.cyral.com/', status: 302, note: 'declared website redirects to https://www.varonis.com/platform/database-activity-monitoring — a different registrable domain (cyral.com -> varonis.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cyral.png
